@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Didact+Gothic&family=Josefin+Sans&family=Jost&family=Mea+Culpa&family=Monsieur+La+Doulaise&family=Nunito+Sans:opsz@6..12&family=Playfair+Display&family=Poppins&family=Rouge+Script&display=swap');
+
+.scrollspy-example-collapsible {
+    position: relative;
+    height: 200px;
+    overflow: auto;
+  }
+body{
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 50px;
+    font-family: "Didact Gothic", sans-serif;
+    position: relative;
+}
+.profile-image {
+    float: left;
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    max-width: 350px; /* Ajusta el tamaño máximo de la imagen según tu preferencia */
+    border-radius: 100px; /* Opcional: añade esquinas redondeadas a la imagen */
+  }
+
+  .profile-text {
+    padding-right: 200px;
+  }
+
+  
