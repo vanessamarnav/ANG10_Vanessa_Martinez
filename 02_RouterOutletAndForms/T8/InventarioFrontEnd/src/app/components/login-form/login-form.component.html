@@ -1,0 +1,31 @@
+<form [formGroup]="formUser" (ngSubmit)="onSubmit()">
+    <!-- 2 column grid layout with text inputs for the first and last names -->
+    <div class="row" *ngIf="isSignUp == true">
+      <mat-form-field  class="col-md-6 mb-4 ">
+          <mat-label>First Name</mat-label> 
+          <input matInput placeholder ="Introduce your name" formControlName="name">
+      </mat-form-field>
+
+      <mat-form-field class="col-md-6 mb-4">
+        <mat-label>Last Name</mat-label>
+        <input matInput placeholder ="Please, tell your last name" formControlName="lastName">
+      </mat-form-field>
+    </div>
+
+    <!-- Email input -->
+    <mat-form-field class="col-md-12 mb-4">
+      <mat-label>Email</mat-label>
+    <input type="email" matInput placeholder="pat@example.com" formControlName="email">
+   </mat-form-field>
+
+    <!-- Password input -->
+    <mat-form-field class="col-md-12 mb-4" color="primary">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput placeholder ="your password" formControlName="password">
+   </mat-form-field>
+
+    <!-- Submit button -->
+    <button type="submit" mat-raised-button class="col-md-12" color="primary" [disabled]="formUser.invalid">
+      {{isSignUp ? 'Sign Up' :'Sign In '}}
+    </button>
+  </form>
