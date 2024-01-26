@@ -19,15 +19,12 @@ export class SignInComponent {
     {}
 
   respForm(request: signIn){
-    this.login.SignIn(request).subscribe(response => {
-      if (response.hasError) {
-        alert("Error capa 8, valida tus credenciales");
-      }
-      if (response.message==='Authorized') {
+    this.login.SignIn(request).subscribe((response: signInResponse)=>{
+      if (response.title==='Authorized') {
         environment.hasSession = true;
         this.router.navigate(['/home']);
       }
-    });
+    })
   }
 
 }
