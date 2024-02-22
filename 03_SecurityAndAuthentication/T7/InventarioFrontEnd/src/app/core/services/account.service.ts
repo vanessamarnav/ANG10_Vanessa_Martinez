@@ -11,7 +11,7 @@ import { SwalAlertService } from './swal-alert.service';
 })
 export class AccountService {
 
-  urlBase: string ='https://localhost:44360/';
+  urlBase: string ='https://localhost:44360';
 
   httpOptions = {
     headers: new HttpHeaders({

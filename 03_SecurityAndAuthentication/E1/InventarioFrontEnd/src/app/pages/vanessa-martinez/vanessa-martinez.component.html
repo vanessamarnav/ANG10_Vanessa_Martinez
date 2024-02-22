@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Agrega las referencias a los archivos de estilo y script de MDB -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdb-ui-kit@3.12.0/dist/css/mdb.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/mdb-ui-kit@3.12.0/dist/js/mdb.min.js"
+    integrity="sha384-2oJiizTjGQ6zR2LX8GhPqO6NBcvj5/JvHNqcazGO8T2GgcZIekMKlZ2z4uTkaCEQ"
+    crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script>
+    import { Scrollspy, initMDB } from "mdb-ui-kit";
+
+initMDB({ Scrollspy });
+
+
+  </script>
+  
+</head>
+<body data-spy="scroll" data-target="#navbar-example" >
+  <div class="container">
+    <div class="profile-image">
+      <img src="../../../assets/images/perfil1.jpg" alt="Perfil" style="width:100%;">
+    </div>
+    <p>Vanessa Martínez Navarrooo</p>
+    <div class="profile-text">
+     
+      <p>Acerca de mí: </p>
+      <p>Soy estudiante de la carrera de ingeniería en sistemas computacionales, un apasionada de la tecnología y del
+        fascinante mundo de la informática. Mi travesía en la ingeniería me ha llevado a explorar diversas áreas, pero
+        mi corazón late con especial intensidad cuando se trata de las bases de datos y la ciencia de datos.</p>
+
+      <p>En el fascinante reino de las bases de datos, disfruto modelando estructuras de datos eficientes y optimizando
+        consultas para lograr un rendimiento óptimo. La ciencia de datos me permite sumergirme en el vasto océano de
+        datos, descubriendo patrones, insights y narrativas ocultas que pueden guiar decisiones informadas y
+        estrategias innovadoras.</p>
+
+      <p>Si bien mi pasión por la tecnología me mantiene ocupada, encuentro mi refugio en la calidez de mi hogar, donde
+        comparto mi vida con tres adorables gatos. Aunque no soy un entusiasta del ejercicio, encuentro la alegría y la
+        compañía en cuidar y consentir a mis peludos amigos, quienes llenan mi vida con travesuras y afecto.</p>
+
+<button (click)="mostrarInformacion()">Mostrar Información</button>
+<div *ngIf="mostrarInfo">
+  <p>Correo: vanessamartinez101301gmail.com</p>
+  <p>GitHub: vanessamarnav</p>
+</div>
+</div>
+</div>
+<div class="container">
+  <button class="btn btn-success" (click)="contratar()">Contratar</button>
+<button class="btn btn-danger" (click)="reportar()">Reportar</button>
+
+</div>
+
+<div class="container">
+  <h2>Carousel Example</h2>  
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" style="max-width: 600px; margin: 0 auto;">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="../../../assets/images/img7.jpg" alt="Los Angeles" style="width: 100%;">
+      </div>
+
+      <div class="item">
+        <img src="../../../assets/images/img1.jpg" alt="Chicago" style="width: 100%;">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<section class="pb-4">
+  <div class="border rounded-5">
+    <section class="p-4">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="scrollspy-example scrollspy-container" data-mdb-scrollspy-init=""
+            data-mdb-target="#scrollspy-collapsible" data-mdb-offset="200"
+            data-mdb-scrollspy-initialized="true">
+            <section id="example-1-collapsible">
+                <h3>Proyecto 1</h3>
+                <p>
+                 Participe en el desarollo de un proyecto programado en arduino el cual estaba conectado a un cargador de telefono que se encendía gracias a la integración de un sensor de movimiento. El sensor detectaba movimiento y el cargador se encendía.
+                </p>
+              </section>
+              <section id="example-2-collapsible">
+                <h3>Proyecto 2</h3>
+                <p>
+                 Otro de los proyecto que colaboré fue en el desarrollo de 
+                un analizador de código para la materia de lenguajes y autómatas 2, este analizador capturaba código y devolvía los errores que se pueden generar en tiempo real. 
+                </p>
+              </section>
+           
+            </div>
+          </div>
+  
+          <div class="col-md-4">
+              <div id="scrollspy-collapsible" class="sticky-top">
+                <ul class="nav flex-column nav-pills menu-sidebar">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#example-1-collapsible">Proyecto 1</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#example-2-collapsible">Proyecto 2</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+  <div class="container"> 
+    <app-contact-form></app-contact-form>
+  </div>
+  
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+var myModal = document.getElementById('myModal')
+var myInput = document.getElementById('myInput')
+
+myModal.addEventListener('shown.bs.modal', function () {
+myInput.focus()
+})
+</script>
+
+</body>
+</html>
