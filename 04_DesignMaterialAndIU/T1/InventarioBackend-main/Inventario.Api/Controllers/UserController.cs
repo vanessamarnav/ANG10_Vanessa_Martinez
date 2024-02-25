@@ -130,7 +130,7 @@ namespace Inventario.Api.Controllers
         // DELETE api/<UserController>/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(string id)
-        {
+        {   
             
             if (ModelState.IsValid)
             {
