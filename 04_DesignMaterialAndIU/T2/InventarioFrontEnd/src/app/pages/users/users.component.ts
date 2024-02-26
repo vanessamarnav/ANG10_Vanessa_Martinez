@@ -20,6 +20,7 @@ export class UsersComponent implements OnInit{
     'status'
   ];
   dataSource!: MatTableDataSource<User>;
+  rowSelected: User | undefined;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
@@ -49,12 +50,14 @@ export class UsersComponent implements OnInit{
   }
 
   openModal(row: User){
+    this.rowSelected = row;
     console.log('Row selected', row);
     this.display = "block";
   }
 
   onCloseHandled()
   {
+    this.rowSelected = undefined;
     this.display= "none";
   }
  
