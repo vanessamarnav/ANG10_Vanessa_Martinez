@@ -60,6 +60,39 @@ export class UsersComponent implements OnInit{
     this.rowSelected = undefined;
     this.display= "none";
   }
- 
+
+  animal: string;
+  name: string;
+  openDialog(row:User){
+    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+      data: {name: this.name, animal: this.animal},
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.animal = result;
+    });
+  }
+  }
   
+
+export interface DialogData{
+  animal: string;
+  name: string;
+}
+
+@Component({
+  selector: 'dialog-overview-example-dialog',
+  templateUrl: 'dialog-overview-example-dialog.html',
+ 
+})
+export class DialogOverviewExampleDialog {
+  constructor(
+    public dialogRef: MatDialogRef<DialogOverviewExampleDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData,
+  ) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
 }

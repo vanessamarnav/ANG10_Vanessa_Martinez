@@ -1,4 +1,3 @@
-import { outputAst } from '@angular/compiler';
 import { Component,EventEmitter, Input, OnInit, Output } from '@angular/core';
 import * as bootstrap from 'bootstrap';
 import { User } from '../../../core/interfaces/user';
@@ -25,7 +24,7 @@ export class UserEditorComponent implements OnInit {
   closeModal(){
     //cerrar el modal
     this.myModal.hide();
-    this.myModal.handleUpdate();
+    //this.myModal.handleUpdate();
     this.closeModalEvent.emit(true);
   }
 }
